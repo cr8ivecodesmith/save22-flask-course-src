@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <style
+        src="{{ url_for('static', filename='styles.css') }}"
+    ></style>
+</head>
+<body>
+
+{% block main %}{% endblock main %}
+{% block footer %}{% endblock footer %}
+
+<script
+    src="/static/js/scripts.js"
+></script>
+</body>
+</html>

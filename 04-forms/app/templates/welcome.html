@@ -1,0 +1,7 @@
+<form method="POST" action="/">
+    <div>{{ form.name.label }}: {{ form.name(class="css_class") }}</div>
+    {% if form.name.errors %}
+        <ul class="errors">{% for error in form.name.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+    {% endif %}
+    <button type="submit">Save</button>
+</form>

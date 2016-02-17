@@ -1,0 +1,7 @@
+{% extends 'guess.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block main %}
+<a href="{{ url_for('guess', name='foo', answer=4, demo=True) }}">guess number</a>
+{% endblock main %}

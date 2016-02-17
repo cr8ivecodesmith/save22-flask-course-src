@@ -1,0 +1,25 @@
+{% extends 'guess.html' %}
+
+{% block title %}Guess the number!{% endblock title %}
+{% set asd = 'bacon' %}
+
+{% block main %}
+    {% if session.logged_in %}
+        <h3> Welcome back, {{ name }} </h3>
+    {% endif %}
+    {% if correct %}
+        {# the user got it right #}
+        <!-- dfasdf -->
+        <title>Congrats!</title>
+        <h1>You found the answer, {{ asd }}</h1>
+    {% else %}
+        <title>You lose!</title>
+        <h1>Try again {{ foo.name }}</h1>
+    {% endif %}
+    {% for fruit in fruits %}
+        <span>{{ fruit }}</span><br>
+    {% endfor %}
+    {% for k, v in foo.items() %}
+        <span>{{ k }}: {{ v }}</span><br>
+    {% endfor %}
+{% endblock main %}
